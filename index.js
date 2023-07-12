@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://samrat:Samrat124@@cluster0.nze1mmv.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://samrat:samrat@cluster0.4vkbqgq.mongodb.net/crm?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -22,7 +22,7 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/enquiries', enquiryRoutes);
 
 // Start the server
-const port = 3010;
+const port = 3020;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
